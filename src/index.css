@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Outfit:wght@100..900&display=swap');
+@import "tailwindcss";
+body {
+  font-family: "Outfit", sans-serif;
+}
+.card {
+  @apply bg-[#f0f4f9] flex flex-col justify-between p-5 cursor-pointer h-52 rounded relative text-[#585858] hover:bg-[#dee2e7];
+}
+.pCard{
+  @apply absolute right-6 bottom-5 bg-white w-8 h-8 p-[5px] rounded-[50%];
+}
+@keyframes shimmer {
+  0% {
+    background-position: -100% 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+.shimmer {
+  @apply bg-gradient-to-r from-transparent via-blue-300 to-transparent rounded-full;
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+.scrollbar-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none; 
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
